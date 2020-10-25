@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\TimeResult;
-use Illuminate\Http\Request;
+
 
 class TimeResultController extends Controller
 {
@@ -14,7 +14,7 @@ class TimeResultController extends Controller
      */
     public function index()
     {
-        //
+        return TimeResult::latest()->take(5)->get();
     }
 
     /**
